@@ -36,9 +36,9 @@ with tab1:
     system_prompt = st.text_input("System Prompt", "You are a friendly chatbot.")
     user_prompt = st.text_input("User Prompt", "Tell me a joke.")
 
-    # model_list = client.models.list().data
-    # model_list = [model.id for model in model_list]
-    model_list = ["llama2-70b-4096", "mixtral-8x7b-32768"]
+    model_list = client.models.list().data
+    model_list = [model.id for model in model_list]
+   # model_list = ["llama2-70b-4096", "mixtral-8x7b-32768"]
 
     model = st.radio("Select the LLM", model_list, horizontal=True)
 
